@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>271972800115-29eet4jh8t6lrp8mdrggs69niiou7rs5.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.271972800115-29eet4jh8t6lrp8mdrggs69niiou7rs5</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAcovzANv6pVczgeym_0K36CaOaOPdDU4s</string>
+	<key>GCM_SENDER_ID</key>
+	<string>271972800115</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.SahitiGajjala.SolarisUV</string>
+	<key>PROJECT_ID</key>
+	<string>solarisuv-c1969</string>
+	<key>STORAGE_BUCKET</key>
+	<string>solarisuv-c1969.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:271972800115:ios:2486f178e317fda9</string>
+	<key>DATABASE_URL</key>
+	<string>https://solarisuv-c1969.firebaseio.com</string>
+</dict>
+</plist>
