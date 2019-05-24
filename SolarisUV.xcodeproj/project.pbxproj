@@ -17,6 +17,10 @@
 		2BC696AD226E8932009A50FD /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC696AC226E8932009A50FD /* LogInViewController.swift */; };
 		2BC696AF226E895E009A50FD /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC696AE226E895E009A50FD /* WelcomeViewController.swift */; };
 		2BC696B1226E916D009A50FD /* UVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC696B0226E916D009A50FD /* UVViewController.swift */; };
+		2BF46E0422988F5B000683BD /* BLECentralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF46E0322988F5B000683BD /* BLECentralViewController.swift */; };
+		2BF46E0622988F83000683BD /* UartModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF46E0522988F83000683BD /* UartModuleViewController.swift */; };
+		2BF46E0822988FD0000683BD /* PeripheralTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF46E0722988FD0000683BD /* PeripheralTableViewCell.swift */; };
+		2BF46E0A2298901E000683BD /* UUIDKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF46E092298901E000683BD /* UUIDKey.swift */; };
 		2BFC06A2229228FE004513AF /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFC06A1229228FE004513AF /* SideMenuVC.swift */; };
 		2BFC06A6229247F5004513AF /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFC06A5229247F5004513AF /* MainVC.swift */; };
 /* End PBXBuildFile section */
@@ -33,6 +37,10 @@
 		2BC696AC226E8932009A50FD /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		2BC696AE226E895E009A50FD /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		2BC696B0226E916D009A50FD /* UVViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UVViewController.swift; sourceTree = "<group>"; };
+		2BF46E0322988F5B000683BD /* BLECentralViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLECentralViewController.swift; sourceTree = "<group>"; };
+		2BF46E0522988F83000683BD /* UartModuleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UartModuleViewController.swift; sourceTree = "<group>"; };
+		2BF46E0722988FD0000683BD /* PeripheralTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeripheralTableViewCell.swift; sourceTree = "<group>"; };
+		2BF46E092298901E000683BD /* UUIDKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UUIDKey.swift; sourceTree = "<group>"; };
 		2BFC06A1229228FE004513AF /* SideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
 		2BFC06A5229247F5004513AF /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		4F4245BAE2AC6F37A162AA66 /* Pods_SolarisUV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SolarisUV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -56,6 +64,10 @@
 			isa = PBXGroup;
 			children = (
 				2B700B1B226D92DC00A0FB18 /* AppDelegate.swift */,
+				2BF46E0322988F5B000683BD /* BLECentralViewController.swift */,
+				2BF46E0522988F83000683BD /* UartModuleViewController.swift */,
+				2BF46E0722988FD0000683BD /* PeripheralTableViewCell.swift */,
+				2BF46E092298901E000683BD /* UUIDKey.swift */,
 				2BFC06A1229228FE004513AF /* SideMenuVC.swift */,
 				2BFC06A5229247F5004513AF /* MainVC.swift */,
 				2BC696AA226E8901009A50FD /* RegisterViewController.swift */,
@@ -272,10 +284,14 @@
 				2BC696AD226E8932009A50FD /* LogInViewController.swift in Sources */,
 				2BC696B1226E916D009A50FD /* UVViewController.swift in Sources */,
 				2BFC06A2229228FE004513AF /* SideMenuVC.swift in Sources */,
+				2BF46E0822988FD0000683BD /* PeripheralTableViewCell.swift in Sources */,
 				2BC696AF226E895E009A50FD /* WelcomeViewController.swift in Sources */,
+				2BF46E0422988F5B000683BD /* BLECentralViewController.swift in Sources */,
 				2BC696AB226E8901009A50FD /* RegisterViewController.swift in Sources */,
 				2B700B1C226D92DC00A0FB18 /* AppDelegate.swift in Sources */,
+				2BF46E0622988F83000683BD /* UartModuleViewController.swift in Sources */,
 				2BFC06A6229247F5004513AF /* MainVC.swift in Sources */,
+				2BF46E0A2298901E000683BD /* UUIDKey.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
