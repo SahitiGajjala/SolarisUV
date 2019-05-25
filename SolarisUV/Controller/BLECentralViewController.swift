@@ -250,6 +250,8 @@ class BLECentralViewController : UIViewController, CBCentralManagerDelegate, CBP
     
     /*After you've found a characteristic of a service that you are interested in, you can read the characteristic's value by calling the peripheral "readValueForCharacteristic" method within the "didDiscoverCharacteristicsFor service" delegate.
      */
+    
+    var sensorUVIDataArray: [Double] = []
     func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
         
         if characteristic == rxCharacteristic {
@@ -259,6 +261,12 @@ class BLECentralViewController : UIViewController, CBCentralManagerDelegate, CBP
                 NotificationCenter.default.post(name:NSNotification.Name(rawValue: "Notify"), object: nil)
                 
             }
+        let num1 = (characteristicASCIIValue as NSString).doubleValue
+            sensorUVIDataArray.append(num1)
+            print(sensorUVIDataArray)
+            let totalSumSensorUVIDataArray = sensorUVIDataArray.reduce(0,+)
+            let totalUVIntensity = totalSumSensorUVIDataArray/40
+            print ("'The total UV Intensity is \(totalUVIntensity)")
         }
     }
     
