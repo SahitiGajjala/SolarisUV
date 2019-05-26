@@ -11,6 +11,8 @@
 		2B700B1C226D92DC00A0FB18 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B700B1B226D92DC00A0FB18 /* AppDelegate.swift */; };
 		2B700B23226D92E600A0FB18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B700B22226D92E600A0FB18 /* Assets.xcassets */; };
 		2B700B26226D92E600A0FB18 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B700B24226D92E600A0FB18 /* LaunchScreen.storyboard */; };
+		2BAC33092299FECB0087153F /* SkinType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAC33082299FECB0087153F /* SkinType.swift */; };
+		2BAC3310229A0DFB0087153F /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAC330F229A0DFB0087153F /* CollectionViewCell.swift */; };
 		2BC696A7226E8129009A50FD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2BC696A6226E8129009A50FD /* GoogleService-Info.plist */; };
 		2BC696A9226E85F3009A50FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BC696A8226E85F3009A50FD /* Main.storyboard */; };
 		2BC696AB226E8901009A50FD /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC696AA226E8901009A50FD /* RegisterViewController.swift */; };
@@ -28,9 +30,11 @@
 /* Begin PBXFileReference section */
 		2B700B18226D92DB00A0FB18 /* SolarisUV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SolarisUV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B700B1B226D92DC00A0FB18 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2B700B22226D92E600A0FB18 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2B700B22226D92E600A0FB18 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
 		2B700B25226D92E600A0FB18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2B700B27226D92E600A0FB18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BAC33082299FECB0087153F /* SkinType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkinType.swift; sourceTree = "<group>"; };
+		2BAC330F229A0DFB0087153F /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		2BC696A6226E8129009A50FD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2BC696A8226E85F3009A50FD /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		2BC696AA226E8901009A50FD /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -64,16 +68,9 @@
 			isa = PBXGroup;
 			children = (
 				2B700B1B226D92DC00A0FB18 /* AppDelegate.swift */,
-				2BF46E0322988F5B000683BD /* BLECentralViewController.swift */,
-				2BF46E0522988F83000683BD /* UartModuleViewController.swift */,
-				2BF46E0722988FD0000683BD /* PeripheralTableViewCell.swift */,
-				2BF46E092298901E000683BD /* UUIDKey.swift */,
-				2BFC06A1229228FE004513AF /* SideMenuVC.swift */,
-				2BFC06A5229247F5004513AF /* MainVC.swift */,
-				2BC696AA226E8901009A50FD /* RegisterViewController.swift */,
-				2BC696AC226E8932009A50FD /* LogInViewController.swift */,
-				2BC696AE226E895E009A50FD /* WelcomeViewController.swift */,
-				2BC696B0226E916D009A50FD /* UVViewController.swift */,
+				2BAC330A2299FF740087153F /* Bluetooth */,
+				2BAC330B2299FFAC0087153F /* User Authentication */,
+				2BAC330E229A021E0087153F /* User Profile */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -83,6 +80,8 @@
 			children = (
 				2B700B24226D92E600A0FB18 /* LaunchScreen.storyboard */,
 				2BC696A8226E85F3009A50FD /* Main.storyboard */,
+				2BAC330F229A0DFB0087153F /* CollectionViewCell.swift */,
+				2B700B22226D92E600A0FB18 /* Assets.xcassets */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -127,10 +126,57 @@
 				2B2CCAF4226DA287008EEA7B /* Model */,
 				2B2CCAF3226DA218008EEA7B /* View */,
 				2B2CCAF2226DA1F2008EEA7B /* Controller */,
-				2B700B22226D92E600A0FB18 /* Assets.xcassets */,
 				2B2CCAF5226DA298008EEA7B /* Supporting Files */,
 			);
 			path = SolarisUV;
+			sourceTree = "<group>";
+		};
+		2BAC330A2299FF740087153F /* Bluetooth */ = {
+			isa = PBXGroup;
+			children = (
+				2BF46E0522988F83000683BD /* UartModuleViewController.swift */,
+				2BF46E0722988FD0000683BD /* PeripheralTableViewCell.swift */,
+				2BF46E092298901E000683BD /* UUIDKey.swift */,
+				2BAC330C229A00150087153F /* UV Sensor Data */,
+			);
+			path = Bluetooth;
+			sourceTree = "<group>";
+		};
+		2BAC330B2299FFAC0087153F /* User Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				2BC696AA226E8901009A50FD /* RegisterViewController.swift */,
+				2BC696AC226E8932009A50FD /* LogInViewController.swift */,
+				2BC696AE226E895E009A50FD /* WelcomeViewController.swift */,
+				2BAC330D229A00A80087153F /* Side Menu  */,
+			);
+			path = "User Authentication";
+			sourceTree = "<group>";
+		};
+		2BAC330C229A00150087153F /* UV Sensor Data */ = {
+			isa = PBXGroup;
+			children = (
+				2BF46E0322988F5B000683BD /* BLECentralViewController.swift */,
+			);
+			path = "UV Sensor Data";
+			sourceTree = "<group>";
+		};
+		2BAC330D229A00A80087153F /* Side Menu  */ = {
+			isa = PBXGroup;
+			children = (
+				2BC696B0226E916D009A50FD /* UVViewController.swift */,
+				2BFC06A1229228FE004513AF /* SideMenuVC.swift */,
+				2BFC06A5229247F5004513AF /* MainVC.swift */,
+			);
+			path = "Side Menu ";
+			sourceTree = "<group>";
+		};
+		2BAC330E229A021E0087153F /* User Profile */ = {
+			isa = PBXGroup;
+			children = (
+				2BAC33082299FECB0087153F /* SkinType.swift */,
+			);
+			path = "User Profile";
 			sourceTree = "<group>";
 		};
 		CD8825769CD241A04B3B4D95 /* Pods */ = {
@@ -281,6 +327,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BAC33092299FECB0087153F /* SkinType.swift in Sources */,
 				2BC696AD226E8932009A50FD /* LogInViewController.swift in Sources */,
 				2BC696B1226E916D009A50FD /* UVViewController.swift in Sources */,
 				2BFC06A2229228FE004513AF /* SideMenuVC.swift in Sources */,
@@ -288,6 +335,7 @@
 				2BC696AF226E895E009A50FD /* WelcomeViewController.swift in Sources */,
 				2BF46E0422988F5B000683BD /* BLECentralViewController.swift in Sources */,
 				2BC696AB226E8901009A50FD /* RegisterViewController.swift in Sources */,
+				2BAC3310229A0DFB0087153F /* CollectionViewCell.swift in Sources */,
 				2B700B1C226D92DC00A0FB18 /* AppDelegate.swift in Sources */,
 				2BF46E0622988F83000683BD /* UartModuleViewController.swift in Sources */,
 				2BFC06A6229247F5004513AF /* MainVC.swift in Sources */,

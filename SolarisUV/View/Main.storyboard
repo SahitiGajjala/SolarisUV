@@ -455,7 +455,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="front-page-logo-2" translatesAutoresizingMaskIntoConstraints="NO" id="Hy7-oO-luz">
-                                <rect key="frame" x="199" y="396" width="16" height="16"/>
+                                <rect key="frame" x="118.5" y="292" width="177" height="224"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -466,12 +466,12 @@
                     </view>
                     <connections>
                         <segue destination="lJw-Nv-Q6L" kind="push" identifier="A" id="TJA-a5-zAH"/>
-                        <segue destination="Vnh-Xs-6kL" kind="push" identifier="C" id="RZ5-GA-z5S"/>
                         <segue destination="qfK-Cm-ljM" kind="push" identifier="D" id="EU8-5x-20x"/>
                         <segue destination="hQN-3f-uJk" kind="push" identifier="E" id="8yk-rB-nN7"/>
                         <segue destination="Vui-5Q-Yx8" kind="push" identifier="F" id="nfu-kX-98s"/>
                         <segue destination="fGD-e4-eEb" kind="push" identifier="G" id="Ipq-1X-iMe"/>
                         <segue destination="578-zU-BpU" kind="push" identifier="B" id="vSN-P1-9xm"/>
+                        <segue destination="Vnh-Xs-6kL" kind="push" identifier="C" id="lTe-za-465"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ika-BI-RUk" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -506,10 +506,10 @@
             </objects>
             <point key="canvasLocation" x="3772" y="-1426"/>
         </scene>
-        <!--View Controller-->
+        <!--SkinTypes-->
         <scene sceneID="TlI-wG-8HZ">
             <objects>
-                <viewController id="Vnh-Xs-6kL" sceneMemberID="viewController">
+                <viewController id="Vnh-Xs-6kL" customClass="SkinType" customModule="SolarisUV" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="R2h-5a-EyZ"/>
                         <viewControllerLayoutGuide type="bottom" id="xdw-pf-cPA"/>
@@ -518,21 +518,60 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="c" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E3t-vY-iJe">
-                                <rect key="frame" x="124" y="114" width="10" height="21"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="GP9-De-T8t">
+                                <rect key="frame" x="0.0" y="88" width="414" height="720"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="7p5-fx-3LB">
+                                    <size key="itemSize" width="180" height="200"/>
+                                    <size key="headerReferenceSize" width="0.0" height="10"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="0Ps-tK-kqF" customClass="CollectionViewCell" customModule="SolarisUV" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="10" width="180" height="200"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="180" height="200"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rqm-DG-xgR">
+                                                    <rect key="frame" x="10" y="20" width="160" height="128"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ccp-Nq-bOw">
+                                                    <rect key="frame" x="10" y="159" width="160" height="41"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="skinType1ImageView" destination="rqm-DG-xgR" id="MAh-nY-3J9"/>
+                                            <outlet property="skinType1Label" destination="ccp-Nq-bOw" id="YRc-Z5-reQ"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="Cell" id="xWF-Iz-b3b">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="10"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </collectionReusableView>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
-                    <navigationItem key="navigationItem" id="qLJ-6o-h2p"/>
+                    <navigationItem key="navigationItem" title="SkinTypes" id="qLJ-6o-h2p"/>
+                    <connections>
+                        <outlet property="collectionView" destination="GP9-De-T8t" id="buz-oH-qaY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TJk-b2-cR3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3816" y="-183"/>
+            <point key="canvasLocation" x="5020.289855072464" y="-141.96428571428569"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="jwS-Tf-bkY">
@@ -646,24 +685,10 @@
             </objects>
             <point key="canvasLocation" x="3770" y="2503"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="3Sj-MN-Ula">
-            <objects>
-                <navigationController id="N99-Tw-sHp" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="YgA-yf-Zlf"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qUs-SA-xGj">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="X0M-fk-9R4" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3772" y="-800"/>
-        </scene>
         <!--Central View Controller-->
         <scene sceneID="gGO-hC-0ic">
             <objects>
-                <viewController storyboardIdentifier="BLECentralViewController" automaticallyAdjustsScrollViewInsets="NO" id="578-zU-BpU" customClass="BLECentralViewController" customModule="Basic_Chat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BLECentralViewController" automaticallyAdjustsScrollViewInsets="NO" id="578-zU-BpU" customClass="BLECentralViewController" customModule="SolarisUV" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Qoe-Ej-emu"/>
                         <viewControllerLayoutGuide type="bottom" id="Xno-Xu-pPK"/>
@@ -676,7 +701,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="730"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BlueCell" rowHeight="98" id="ca5-tC-Hek" customClass="PeripheralTableViewCell" customModule="Basic_Chat" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BlueCell" rowHeight="98" id="ca5-tC-Hek" customClass="PeripheralTableViewCell" customModule="SolarisUV" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="98"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ca5-tC-Hek" id="P6Z-pD-zeG">
@@ -738,7 +763,7 @@
         <!--Uart Module View Controller-->
         <scene sceneID="5ey-Po-xay">
             <objects>
-                <viewController storyboardIdentifier="UartModuleViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3De-TF-oRU" customClass="UartModuleViewController" customModule="Basic_Chat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UartModuleViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3De-TF-oRU" customClass="UartModuleViewController" customModule="SolarisUV" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KI5-se-3qz"/>
                         <viewControllerLayoutGuide type="bottom" id="pVH-dP-6MZ"/>

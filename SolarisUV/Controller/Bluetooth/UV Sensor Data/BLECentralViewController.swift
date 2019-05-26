@@ -265,8 +265,8 @@ class BLECentralViewController : UIViewController, CBCentralManagerDelegate, CBP
             sensorUVIDataArray.append(num1)
             print(sensorUVIDataArray)
             let totalSumSensorUVIDataArray = sensorUVIDataArray.reduce(0,+)
-            let totalUVIntensity = totalSumSensorUVIDataArray/40
-            print ("'The total UV Intensity is \(totalUVIntensity)")
+            let totalUVRadiation = totalSumSensorUVIDataArray/40
+            print ("'The total UV Radiation is \(totalUVRadiation) Joules/m^2")
         }
     }
     
