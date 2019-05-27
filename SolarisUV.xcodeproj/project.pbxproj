@@ -13,12 +13,14 @@
 		2B700B26226D92E600A0FB18 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B700B24226D92E600A0FB18 /* LaunchScreen.storyboard */; };
 		2BAC33092299FECB0087153F /* SkinType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAC33082299FECB0087153F /* SkinType.swift */; };
 		2BAC3310229A0DFB0087153F /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAC330F229A0DFB0087153F /* CollectionViewCell.swift */; };
+		2BAC3312229B37B00087153F /* UserAge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAC3311229B37B00087153F /* UserAge.swift */; };
 		2BC696A7226E8129009A50FD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2BC696A6226E8129009A50FD /* GoogleService-Info.plist */; };
 		2BC696A9226E85F3009A50FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BC696A8226E85F3009A50FD /* Main.storyboard */; };
 		2BC696AB226E8901009A50FD /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC696AA226E8901009A50FD /* RegisterViewController.swift */; };
 		2BC696AD226E8932009A50FD /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC696AC226E8932009A50FD /* LogInViewController.swift */; };
 		2BC696AF226E895E009A50FD /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC696AE226E895E009A50FD /* WelcomeViewController.swift */; };
 		2BC696B1226E916D009A50FD /* UVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC696B0226E916D009A50FD /* UVViewController.swift */; };
+		2BD9F375229B61430078CC64 /* VitaminDProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD9F374229B61430078CC64 /* VitaminDProgress.swift */; };
 		2BF46E0422988F5B000683BD /* BLECentralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF46E0322988F5B000683BD /* BLECentralViewController.swift */; };
 		2BF46E0622988F83000683BD /* UartModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF46E0522988F83000683BD /* UartModuleViewController.swift */; };
 		2BF46E0822988FD0000683BD /* PeripheralTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF46E0722988FD0000683BD /* PeripheralTableViewCell.swift */; };
@@ -35,12 +37,14 @@
 		2B700B27226D92E600A0FB18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BAC33082299FECB0087153F /* SkinType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkinType.swift; sourceTree = "<group>"; };
 		2BAC330F229A0DFB0087153F /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		2BAC3311229B37B00087153F /* UserAge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAge.swift; sourceTree = "<group>"; };
 		2BC696A6226E8129009A50FD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2BC696A8226E85F3009A50FD /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		2BC696AA226E8901009A50FD /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		2BC696AC226E8932009A50FD /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		2BC696AE226E895E009A50FD /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		2BC696B0226E916D009A50FD /* UVViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UVViewController.swift; sourceTree = "<group>"; };
+		2BD9F374229B61430078CC64 /* VitaminDProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VitaminDProgress.swift; sourceTree = "<group>"; };
 		2BF46E0322988F5B000683BD /* BLECentralViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLECentralViewController.swift; sourceTree = "<group>"; };
 		2BF46E0522988F83000683BD /* UartModuleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UartModuleViewController.swift; sourceTree = "<group>"; };
 		2BF46E0722988FD0000683BD /* PeripheralTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeripheralTableViewCell.swift; sourceTree = "<group>"; };
@@ -71,6 +75,7 @@
 				2BAC330A2299FF740087153F /* Bluetooth */,
 				2BAC330B2299FFAC0087153F /* User Authentication */,
 				2BAC330E229A021E0087153F /* User Profile */,
+				2BD9F373229B60C00078CC64 /* Vitamin D Goal */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -175,8 +180,17 @@
 			isa = PBXGroup;
 			children = (
 				2BAC33082299FECB0087153F /* SkinType.swift */,
+				2BAC3311229B37B00087153F /* UserAge.swift */,
 			);
 			path = "User Profile";
+			sourceTree = "<group>";
+		};
+		2BD9F373229B60C00078CC64 /* Vitamin D Goal */ = {
+			isa = PBXGroup;
+			children = (
+				2BD9F374229B61430078CC64 /* VitaminDProgress.swift */,
+			);
+			path = "Vitamin D Goal";
 			sourceTree = "<group>";
 		};
 		CD8825769CD241A04B3B4D95 /* Pods */ = {
@@ -335,7 +349,9 @@
 				2BC696AF226E895E009A50FD /* WelcomeViewController.swift in Sources */,
 				2BF46E0422988F5B000683BD /* BLECentralViewController.swift in Sources */,
 				2BC696AB226E8901009A50FD /* RegisterViewController.swift in Sources */,
+				2BAC3312229B37B00087153F /* UserAge.swift in Sources */,
 				2BAC3310229A0DFB0087153F /* CollectionViewCell.swift in Sources */,
+				2BD9F375229B61430078CC64 /* VitaminDProgress.swift in Sources */,
 				2B700B1C226D92DC00A0FB18 /* AppDelegate.swift in Sources */,
 				2BF46E0622988F83000683BD /* UartModuleViewController.swift in Sources */,
 				2BFC06A6229247F5004513AF /* MainVC.swift in Sources */,

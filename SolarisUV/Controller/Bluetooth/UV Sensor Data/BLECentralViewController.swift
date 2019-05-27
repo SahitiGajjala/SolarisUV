@@ -261,12 +261,27 @@ class BLECentralViewController : UIViewController, CBCentralManagerDelegate, CBP
                 NotificationCenter.default.post(name:NSNotification.Name(rawValue: "Notify"), object: nil)
                 
             }
+            
+            struct GlobalVariableUVR{
+                static var recievedUVRadiation: Double = 0.0
+                static var ageLessThan70: Double = 600.0
+                static var ageGreaterThan70: Double = 800.0
+            }
+            
+            var vitD: Double = 0.0
+            var vitDAge: Double = 0.0
+            
         let num1 = (characteristicASCIIValue as NSString).doubleValue
             sensorUVIDataArray.append(num1)
             print(sensorUVIDataArray)
             let totalSumSensorUVIDataArray = sensorUVIDataArray.reduce(0,+)
-            let totalUVRadiation = totalSumSensorUVIDataArray/40
-            print ("'The total UV Radiation is \(totalUVRadiation) Joules/m^2")
+            GlobalVariableUVR.recievedUVRadiation = totalSumSensorUVIDataArray/40
+            print ("'The total UV Intensity is \(GlobalVariableUVR.recievedUVRadiation)")
+            print("This is the SDD equivalent \(SkinType.GlobalVariableSDD.SDDequivalentOf1IU)")
+            
+            vitD =  (GlobalVariableUVR.recievedUVRadiation)/(SkinType.GlobalVariableSDD.SDDequivalentOf1IU)
+            vitDAge = (vitD/GlobalVariableUVR.ageLessThan70)*100
+            print("This is the percentage of progress \(vitDAge)")
         }
     }
     

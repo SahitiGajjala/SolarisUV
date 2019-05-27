@@ -6,9 +6,11 @@
 //  Copyright © 2019 Sahiti Gajjala. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
 class SkinType: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -23,6 +25,8 @@ class SkinType: UIViewController, UICollectionViewDelegate, UICollectionViewData
         UIImage(named: "type5")!,
         UIImage(named: "type6")!,
     ]
+    
+    let skinMED: [Double] = [200, 250, 300, 450, 600, 1000]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,12 +62,28 @@ class SkinType: UIViewController, UICollectionViewDelegate, UICollectionViewData
         
     }
     
+    struct GlobalVariableSDD{
+    static var SDDequivalentOf1IU: Double = 0.0
+    }
+    
+    var userSkinType: Double = 0.0
+    var SDD: Double = 0.0
+    var SDDequivalentOf1000IU: Double = 0.0
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath)
         cell?.layer.borderColor = UIColor.gray.cgColor
         cell?.layer.borderWidth = 2
-        
+        let SDD = (skinMED[indexPath.item])/4
+        let SDDequivalentOf1000IU = ((SDD*2)/3)
+        GlobalVariableSDD.SDDequivalentOf1IU = (SDDequivalentOf1000IU/1000)
+        print("For \(skinTypes[indexPath.item]), \(GlobalVariableSDD.SDDequivalentOf1IU) UVR is equal to 1 IU")
     }
+    
+    
+    
+    
+    
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath)
@@ -75,13 +95,6 @@ class SkinType: UIViewController, UICollectionViewDelegate, UICollectionViewData
     
 }
 
-// Standard Vitamin D Dose for Skin types 1-6
-//var SDDType1: Double = MED/4
-//var SDDType2: Double = 46.5
-//var SDDType3: Double = 55.8
-//var SDDType4: Double = 83.6
-//var SDDType5: Double = 111.4
-//var SDDType6: Double = 185.1
 
 
 
