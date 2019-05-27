@@ -27,17 +27,17 @@ class UartModuleViewController: UIViewController, CBPeripheralManagerDelegate, U
         super.viewDidLoad()
         
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"Back", style:.plain, target:nil, action:nil)
-        self.baseTextView.delegate = self
-        self.inputTextField.delegate = self
+       // self.baseTextView.delegate = self
+      //  self.inputTextField.delegate = self
         //Base text view setup
-        self.baseTextView.layer.borderWidth = 3.0
-        self.baseTextView.layer.borderColor = UIColor.blue.cgColor
-        self.baseTextView.layer.cornerRadius = 3.0
-        self.baseTextView.text = ""
-        //Input Text Field setup
-        self.inputTextField.layer.borderWidth = 2.0
-        self.inputTextField.layer.borderColor = UIColor.blue.cgColor
-        self.inputTextField.layer.cornerRadius = 3.0
+//        self.baseTextView.layer.borderWidth = 3.0
+//        self.baseTextView.layer.borderColor = UIColor.blue.cgColor
+//        self.baseTextView.layer.cornerRadius = 3.0
+//        self.baseTextView.text = ""
+//        //Input Text Field setup
+//        self.inputTextField.layer.borderWidth = 2.0
+//        self.inputTextField.layer.borderColor = UIColor.blue.cgColor
+//        self.inputTextField.layer.cornerRadius = 3.0
         //Create and start the peripheral manager
         peripheralManager = CBPeripheralManager(delegate: self, queue: nil)
         //-Notification for updating the text view with incoming text
@@ -45,7 +45,7 @@ class UartModuleViewController: UIViewController, CBPeripheralManagerDelegate, U
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        self.baseTextView.text = ""
+//        self.baseTextView.text = ""
         
         
     }
@@ -66,12 +66,12 @@ class UartModuleViewController: UIViewController, CBPeripheralManagerDelegate, U
             let myAttributes2 = [NSAttributedString.Key.font: myFont!, NSAttributedString.Key.foregroundColor: UIColor.red]
             let attribString = NSAttributedString(string: "[Incoming]: " + (characteristicASCIIValue as String) + appendString, attributes: myAttributes2)
             let newAsciiText = NSMutableAttributedString(attributedString: self.consoleAsciiText!)
-            self.baseTextView.attributedText = NSAttributedString(string: characteristicASCIIValue as String , attributes: myAttributes2)
+//            self.baseTextView.attributedText = NSAttributedString(string: characteristicASCIIValue as String , attributes: myAttributes2)
             
             newAsciiText.append(attribString)
             
             self.consoleAsciiText = newAsciiText
-            self.baseTextView.attributedText = self.consoleAsciiText
+//            self.baseTextView.attributedText = self.consoleAsciiText
             
         }
     }

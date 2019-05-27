@@ -14,4 +14,5 @@ import UIKit
 //    static var ageGreaterThan70: Double = 800.0
 //}
 
-
+//                static var ageLessThan70: Double = 600.0
+//                static var ageGreaterThan70: Double = 800.0
