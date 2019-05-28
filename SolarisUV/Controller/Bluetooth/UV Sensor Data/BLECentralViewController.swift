@@ -16,7 +16,9 @@ var rxCharacteristic : CBCharacteristic?
 var blePeripheral : CBPeripheral?
 var characteristicASCIIValue = NSString()
 
-
+var vitDAge: Double = 0.0
+var recievedUVRadiation: Double = 0.0
+var vitD: Double = 0.0
 
 class BLECentralViewController : UIViewController, CBCentralManagerDelegate, CBPeripheralDelegate, UITableViewDelegate, UITableViewDataSource{
     
@@ -56,7 +58,8 @@ class BLECentralViewController : UIViewController, CBCentralManagerDelegate, CBP
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        disconnectFromDevice()
+        //Allows sensor data to be collected even if you "disconnect" from UART
+        //disconnectFromDevice()
         super.viewDidAppear(animated)
         refreshScanView()
         print("View Cleared")
@@ -65,7 +68,7 @@ class BLECentralViewController : UIViewController, CBCentralManagerDelegate, CBP
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         print("Stop Scanning")
-        centralManager?.stopScan()
+       // centralManager?.stopScan()
     }
     
     /*Okay, now that we have our CBCentalManager up and running, it's time to start searching for devices. You can do this by calling the "scanForPeripherals" method.*/
@@ -75,7 +78,8 @@ class BLECentralViewController : UIViewController, CBCentralManagerDelegate, CBP
         print("Now Scanning...")
         self.timer.invalidate()
         centralManager?.scanForPeripherals(withServices: [BLEService_UUID] , options: [CBCentralManagerScanOptionAllowDuplicatesKey:false])
-        Timer.scheduledTimer(timeInterval: 17, target: self, selector: #selector(self.cancelScan), userInfo: nil, repeats: false)
+        //Dermines how long we scan for data
+        Timer.scheduledTimer(timeInterval: 100000, target: self, selector: #selector(self.cancelScan), userInfo: nil, repeats: false)
     }
     
     @objc func cancelScan() {
@@ -262,23 +266,21 @@ class BLECentralViewController : UIViewController, CBCentralManagerDelegate, CBP
                 
             }
             
-            struct GlobalVariableUVR{
-                static var recievedUVRadiation: Double = 0.0
-                
-            }
-            
-            var vitDAge: Double = 0.0
-            var vitD: Double = 0.0
+
+// Sensor data sum and Vitamin D progress percentage
             
         let num1 = (characteristicASCIIValue as NSString).doubleValue
+            
             sensorUVIDataArray.append(num1)
             print(sensorUVIDataArray)
-            let totalSumSensorUVIDataArray = sensorUVIDataArray.reduce(0,+)
-            GlobalVariableUVR.recievedUVRadiation = totalSumSensorUVIDataArray/40.0
-            print ("'The total UV Intensity is \(GlobalVariableUVR.recievedUVRadiation)")
-            print("This is the SDD equivalent \(SkinType.GlobalVariableSDD.SDDequivalentOf1IU)")
             
-            vitD =  (GlobalVariableUVR.recievedUVRadiation)/(SkinType.GlobalVariableSDD.SDDequivalentOf1IU)
+            let totalSumSensorUVIDataArray = sensorUVIDataArray.reduce(0,+)
+            
+            recievedUVRadiation = totalSumSensorUVIDataArray/40
+            print ("'The total UV Intensity is \(recievedUVRadiation)")
+            print("This is the SDD equivalent \(SDDequivalentOf1IU)")
+            
+            vitD = (recievedUVRadiation)/(SDDequivalentOf1IU)
             vitDAge = (vitD/600)*100
             print("This is the percentage of progress \(vitDAge)")
         }

@@ -754,6 +754,7 @@
         <!--Uart Module View Controller-->
         <scene sceneID="5ey-Po-xay">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S5u-Hf-xYI" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="UartModuleViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3De-TF-oRU" customClass="UartModuleViewController" customModule="SolarisUV" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KI5-se-3qz"/>
@@ -769,7 +770,6 @@
                         <barButtonItem key="backBarButtonItem" title="Disconnect" id="xPQ-II-tXl"/>
                     </navigationItem>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="S5u-Hf-xYI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5401" y="-771"/>
         </scene>

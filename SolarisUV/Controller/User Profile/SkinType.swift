@@ -9,6 +9,11 @@
 import Foundation
 import UIKit
 
+var SDDequivalentOf1IU: Double = 0.0
+var userSkinType: Double = 0.0
+var SDD: Double = 0.0
+var SDDequivalentOf1000IU: Double = 0.0
+
 class SkinType: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
     
@@ -61,14 +66,7 @@ class SkinType: UIViewController, UICollectionViewDelegate, UICollectionViewData
         return cell
         
     }
-    
-    struct GlobalVariableSDD{
-    static var SDDequivalentOf1IU: Double = 0.0
-    }
-    
-    var userSkinType: Double = 0.0
-    var SDD: Double = 0.0
-    var SDDequivalentOf1000IU: Double = 0.0
+
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath)
@@ -76,13 +74,9 @@ class SkinType: UIViewController, UICollectionViewDelegate, UICollectionViewData
         cell?.layer.borderWidth = 2
         let SDD = (skinMED[indexPath.item])/4
         let SDDequivalentOf1000IU = ((SDD*2)/3)
-        GlobalVariableSDD.SDDequivalentOf1IU = (SDDequivalentOf1000IU/1000)
-        print("For \(skinTypes[indexPath.item]), \(GlobalVariableSDD.SDDequivalentOf1IU) UVR is equal to 1 IU")
+        SDDequivalentOf1IU = (SDDequivalentOf1000IU/1000)
+        print("For \(skinTypes[indexPath.item]), \(SDDequivalentOf1IU) UVR is equal to 1 IU")
     }
-    
-    
-    
-    
     
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
