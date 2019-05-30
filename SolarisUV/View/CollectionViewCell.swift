@@ -12,4 +12,5 @@ class CollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var skinType1ImageView: UIImageView!
     @IBOutlet weak var skinType1Label: UILabel!
+    
 }

@@ -168,6 +168,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <navigationItem key="navigationItem" id="mQe-ke-dZS"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="push" identifier="gotoMAIN" id="cmG-R7-aCz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kwl-y3-34w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -814,4 +817,7 @@
         <image name="menu-2" width="42" height="26"/>
         <image name="sign-up-2" width="212" height="64"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="cmG-R7-aCz"/>
+    </inferredMetricsTieBreakers>
 </document>

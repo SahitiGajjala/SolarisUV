@@ -1,5 +1,5 @@
 //
-//  PageCell.swift
+//  PageCell2.swift
 //  SolarisUV
 //
 //  Created by Sahiti  on 5/29/19.
@@ -8,10 +8,10 @@
 
 import UIKit
 
-class PageCell: UICollectionViewCell{
+class PageCell2: UICollectionViewCell{
     
     let welcomeImageView: UIImageView = {
-        let imageView = UIImageView(image: UIImage(named: "welcome-logo-2"))
+        let imageView = UIImageView(image: UIImage(named: "bluetooth-logo-5"))
         // this enables autolayout for our imageview
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFit
@@ -37,9 +37,7 @@ class PageCell: UICollectionViewCell{
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
-        
-//        backgroundColor = .purple
+        //        backgroundColor = .purple
         setupLayout()
         
     }
@@ -47,7 +45,7 @@ class PageCell: UICollectionViewCell{
     private func setupLayout() {
         
         let middleImageContainerView = UIView()
-//        middleImageContainerView.backgroundColor = .blue
+        //        middleImageContainerView.backgroundColor = .blue
         addSubview(middleImageContainerView)
         //        middleImageContainerView.frame = CGRect(x: 0, y: 250, width: 100, height: 100)
         //enable auto layout
@@ -62,7 +60,7 @@ class PageCell: UICollectionViewCell{
         middleImageContainerView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
         
         middleImageContainerView.addSubview(welcomeImageView)
-        welcomeImageView.leftAnchor.constraint(equalTo: middleImageContainerView.leftAnchor, constant: 30).isActive = true
+        welcomeImageView.leftAnchor.constraint(equalTo: middleImageContainerView.leftAnchor, constant: 100).isActive = true
         welcomeImageView.topAnchor.constraint(equalTo: middleImageContainerView.topAnchor, constant: 275).isActive = true
         welcomeImageView.widthAnchor.constraint(equalToConstant: 150).isActive = true
         welcomeImageView.heightAnchor.constraint(equalToConstant: 150).isActive = true
@@ -71,14 +69,13 @@ class PageCell: UICollectionViewCell{
         middleImageContainerView.addSubview(descriptionTextView)
         descriptionTextView.topAnchor.constraint(equalTo: middleImageContainerView.topAnchor, constant: 425).isActive = true
         descriptionTextView.leftAnchor.constraint(equalTo: middleImageContainerView.leftAnchor, constant: 30).isActive = true
-        
-        
     }
-    
     
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    
     
 }

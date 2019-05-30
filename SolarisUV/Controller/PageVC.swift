@@ -85,18 +85,6 @@ class PageVC: UIViewController {
         
     }
     fileprivate func setupBottomControls() {
-//        view.addSubview(previousButton)
-//        previousButton.backgroundColor = .colorPaletteDeepBlue
-//        previousButton.frame = CGRect(x: 0, y: 0, width: 200, height: 50)
-        
-//        let coralView = UIView()
-//        coralView.backgroundColor = .colorPalettecoral
-        
-//        let deepBlueView = UIView()
-//        deepBlueView.backgroundColor = .colorPaletteDeepBlue
-        
-//        let greyView = UIView()
-//        greyView.backgroundColor = .colorPaletteGrey
         
         let bottomControlsStackView = UIStackView(arrangedSubviews: [previousButton, pageControl, nextButton])
         
@@ -146,6 +134,19 @@ class PageVC: UIViewController {
     
 
 }
+//        view.addSubview(previousButton)
+//        previousButton.backgroundColor = .colorPaletteDeepBlue
+//        previousButton.frame = CGRect(x: 0, y: 0, width: 200, height: 50)
+
+//        let coralView = UIView()
+//        coralView.backgroundColor = .colorPalettecoral
+
+//        let deepBlueView = UIView()
+//        deepBlueView.backgroundColor = .colorPaletteDeepBlue
+
+//        let greyView = UIView()
+//        greyView.backgroundColor = .colorPaletteGrey
+
 // descriptionTextView.rightAnchor.constraint(equalTo: middleImageContainerView.rightAnchor, constant: 80).isActive = true
 
 // descriptionTextView.bottomAnchor.constraint(equalTo: middleImageContainerView.bottomAnchor, constant: 0).isActive = true

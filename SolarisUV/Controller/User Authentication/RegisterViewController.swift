@@ -46,8 +46,8 @@ class RegisterViewController: UIViewController {
                 self.window = UIWindow()
                 self.window?.makeKeyAndVisible()
                 
-                let randomViewController = UIViewController()
-                randomViewController.view.backgroundColor = .purple
+//                let randomViewController = UIViewController()
+//                randomViewController.view.backgroundColor = .purple
                 let layout = UICollectionViewFlowLayout()
                 layout.scrollDirection = .horizontal
                 let swipingController = SwipingController(collectionViewLayout: layout)
