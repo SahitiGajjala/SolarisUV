@@ -6,8 +6,8 @@
 //  Copyright © 2019 Sahiti Gajjala. All rights reserved.
 //
 
-import Foundation
 import UIKit
+import Firebase
 
 class VitaminDProgress: UIViewController, URLSessionDownloadDelegate {
     
@@ -67,39 +67,57 @@ class VitaminDProgress: UIViewController, URLSessionDownloadDelegate {
             , action: #selector(handleTap)))
         
     }
-    let urlString = "https://firebasestorage.googleapis.com/v0/b/firestorechat-e64ac.appspot.com/o/intermediate_training_rec.mp4?alt=media&token=e20261d0-7219-49d2-b32d-367e1606500c"
+//    let urlString = "https://firebasestorage.googleapis.com/v0/b/firestorechat-e64ac.appspot.com/o/intermediate_training_rec.mp4?alt=media&token=e20261d0-7219-49d2-b32d-367e1606500c"
     
-    private func beginDownloadingFile() {
-        print("Attempting to download file")
+//    private func beginDownloadingFile() {
+//        print("Attempting to download file")
+//
+//        shapeLayer.strokeEnd = 0
+//
+//        let configuration = URLSessionConfiguration.default
+//        let operationQueue = OperationQueue()
+//        let urlSession = URLSession(configuration: configuration, delegate: self, delegateQueue: operationQueue)
+//
+//        guard let url = URL(string: urlString) else { return }
+//
+//        let downloadTask = urlSession.downloadTask(with: url)
+//        downloadTask.resume()
+//    }
+    
+    private func beginVitaminDProgress() {
+        print("Attempting to monitor vitamin D progress")
         
         shapeLayer.strokeEnd = 0
         
-        let configuration = URLSessionConfiguration.default
-        let operationQueue = OperationQueue()
-        let urlSession = URLSession(configuration: configuration, delegate: self, delegateQueue: operationQueue)
+        vitSession()
         
-        guard let url = URL(string: urlString) else { return }
-        
-        let downloadTask = urlSession.downloadTask(with: url)
-        downloadTask.resume()
     }
     
-    func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didWriteData bytesWritten: Int64, totalBytesWritten: Int64, totalBytesExpectedToWrite: Int64) {
+    func vitSession() {
+                let percentage = CGFloat(vitDAge)
         
-        let percentage = CGFloat(totalBytesWritten) / CGFloat(totalBytesExpectedToWrite)
-        print(percentage)
+                DispatchQueue.main.async{
         
-        DispatchQueue.main.async{
-    
-        self.percentageLabel.text = "\(Int(percentage * 100))% "
-        self.shapeLayer.strokeEnd = percentage
-        }
+                self.percentageLabel.text = "\(Int(percentage))% "
+                self.shapeLayer.strokeEnd = percentage
+                }
     }
+    
+//    func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didWriteData bytesWritten: Int64, totalBytesWritten: Int64, totalBytesExpectedToWrite: Int64) {
+//
+//        let percentage = CGFloat(vitDAge)
+//
+//        DispatchQueue.main.async{
+//
+//        self.percentageLabel.text = "\(Int(percentage))% "
+//        self.shapeLayer.strokeEnd = percentage
+//        }
+//    }
     
     func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didFinishDownloadingTo location: URL) {
         print ("Finished downloading file")
     }
-    
+
     fileprivate func animateCircle() {
         let basicAnimation = CABasicAnimation(keyPath: "strokeEnd")
         
@@ -116,9 +134,11 @@ class VitaminDProgress: UIViewController, URLSessionDownloadDelegate {
     @objc private func handleTap() {
         print("Attempting to animate stroke")
         
-        beginDownloadingFile()
+        beginVitaminDProgress()
         
-//        animateCircle()
+//        beginDownloadingFile()
+        
+    // animateCircle()
     }
 }
 

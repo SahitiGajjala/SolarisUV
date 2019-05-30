@@ -19,17 +19,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="front-page-logo-2" translatesAutoresizingMaskIntoConstraints="NO" id="VyO-iu-X3J">
-                                <rect key="frame" x="62.666666666666657" y="281" width="249.99999999999997" height="250"/>
+                                <rect key="frame" x="62.666666666666657" y="209" width="249.99999999999997" height="250"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="250" id="7ys-hb-Tj8"/>
-                                    <constraint firstAttribute="height" constant="250" id="HYl-Ce-BiL"/>
+                                    <constraint firstAttribute="height" constant="250" id="haC-MX-fQr"/>
+                                    <constraint firstAttribute="width" constant="250" id="m8H-UA-byF"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="VyO-iu-X3J" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="hso-hr-QfY"/>
-                            <constraint firstItem="VyO-iu-X3J" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="kap-5A-f5w"/>
+                            <constraint firstItem="VyO-iu-X3J" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="CMz-At-Jsj"/>
+                            <constraint firstItem="VyO-iu-X3J" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-72" id="h2B-PK-QtO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

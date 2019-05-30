@@ -16,6 +16,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+
+//        //building out the app in code
+//        window = UIWindow()
+//        window?.makeKeyAndVisible()
+//
+//        let randomViewController = UIViewController()
+//        randomViewController.view.backgroundColor = .purple
+//        let layout = UICollectionViewFlowLayout()
+//        let swipingController = SwipingController(collectionViewLayout: layout)
+//
+//        window?.rootViewController = swipingController
+//
         
         //TODO: Initalize and Configure your Firebase
         FirebaseApp.configure()

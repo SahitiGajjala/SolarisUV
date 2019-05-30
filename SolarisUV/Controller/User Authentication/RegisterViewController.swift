@@ -11,6 +11,8 @@ import Firebase
 
 class RegisterViewController: UIViewController {
     
+    var window: UIWindow?
+    
     //Link IBOutlets
     @IBOutlet weak var emailTextfield: UITextField!
     @IBOutlet weak var passwordTextfield: UITextField!
@@ -38,7 +40,20 @@ class RegisterViewController: UIViewController {
                 //success
                 print("Registration Successful!")
                 
-                self.performSegue(withIdentifier: "goToUV", sender: self)
+                self.performSegue(withIdentifier: "goToPageVC", sender: self)
+               
+                //building out the app in code
+                self.window = UIWindow()
+                self.window?.makeKeyAndVisible()
+                
+                let randomViewController = UIViewController()
+                randomViewController.view.backgroundColor = .purple
+                let layout = UICollectionViewFlowLayout()
+                layout.scrollDirection = .horizontal
+                let swipingController = SwipingController(collectionViewLayout: layout)
+                
+                self.window?.rootViewController = swipingController
+                
                 
             }
             

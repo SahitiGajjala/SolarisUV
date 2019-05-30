@@ -6,7 +6,7 @@
 //  Copyright © 2019 Sahiti Gajjala. All rights reserved.
 //
 
-import Foundation
+
 import UIKit
 
 //struct GlobalVariableAge {

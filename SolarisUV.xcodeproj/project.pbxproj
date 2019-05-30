@@ -8,9 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		29665DB5DF47A13A8DAE417B /* Pods_SolarisUV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F4245BAE2AC6F37A162AA66 /* Pods_SolarisUV.framework */; };
+		2B25CFE2229DE6C7009A8B37 /* FirebaseDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B25CFE1229DE6C6009A8B37 /* FirebaseDatabase.swift */; };
 		2B700B1C226D92DC00A0FB18 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B700B1B226D92DC00A0FB18 /* AppDelegate.swift */; };
 		2B700B23226D92E600A0FB18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B700B22226D92E600A0FB18 /* Assets.xcassets */; };
 		2B700B26226D92E600A0FB18 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B700B24226D92E600A0FB18 /* LaunchScreen.storyboard */; };
+		2B95C63B229F2A8E0014827F /* PageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B95C63A229F2A8E0014827F /* PageCell.swift */; };
 		2BAC33092299FECB0087153F /* SkinType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAC33082299FECB0087153F /* SkinType.swift */; };
 		2BAC3310229A0DFB0087153F /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAC330F229A0DFB0087153F /* CollectionViewCell.swift */; };
 		2BAC3312229B37B00087153F /* UserAge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAC3311229B37B00087153F /* UserAge.swift */; };
@@ -21,6 +23,20 @@
 		2BC696AF226E895E009A50FD /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC696AE226E895E009A50FD /* WelcomeViewController.swift */; };
 		2BC696B1226E916D009A50FD /* UVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC696B0226E916D009A50FD /* UVViewController.swift */; };
 		2BD9F375229B61430078CC64 /* VitaminDProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD9F374229B61430078CC64 /* VitaminDProgress.swift */; };
+		2BE45383229E79E90017892C /* PageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE45382229E79E90017892C /* PageVC.swift */; };
+		2BE45386229E8A0F0017892C /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2BE45385229E8A0F0017892C /* Lato-Light.ttf */; };
+		2BE45388229E8B360017892C /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2BE45387229E8B360017892C /* Lato-Bold.ttf */; };
+		2BE4538A229E8C660017892C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE45389229E8C660017892C /* Constants.swift */; };
+		2BE45393229E906E0017892C /* Lato-Hairline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2BE4538B229E906C0017892C /* Lato-Hairline.ttf */; };
+		2BE45394229E906E0017892C /* Lato-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2BE4538C229E906C0017892C /* Lato-Black.ttf */; };
+		2BE45395229E906E0017892C /* Lato-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2BE4538D229E906C0017892C /* Lato-BlackItalic.ttf */; };
+		2BE45396229E906E0017892C /* Lato-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2BE4538E229E906C0017892C /* Lato-BoldItalic.ttf */; };
+		2BE45397229E906E0017892C /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2BE4538F229E906D0017892C /* Lato-Regular.ttf */; };
+		2BE45398229E906E0017892C /* Lato-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2BE45390229E906D0017892C /* Lato-Italic.ttf */; };
+		2BE45399229E906E0017892C /* Lato-HairlineItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2BE45391229E906D0017892C /* Lato-HairlineItalic.ttf */; };
+		2BE4539A229E906E0017892C /* Lato-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2BE45392229E906D0017892C /* Lato-LightItalic.ttf */; };
+		2BE4539C229E9E7B0017892C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE4539B229E9E7B0017892C /* Extensions.swift */; };
+		2BE4539E229EBEE80017892C /* SwipingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE4539D229EBEE80017892C /* SwipingController.swift */; };
 		2BF46E0422988F5B000683BD /* BLECentralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF46E0322988F5B000683BD /* BLECentralViewController.swift */; };
 		2BF46E0622988F83000683BD /* UartModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF46E0522988F83000683BD /* UartModuleViewController.swift */; };
 		2BF46E0822988FD0000683BD /* PeripheralTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF46E0722988FD0000683BD /* PeripheralTableViewCell.swift */; };
@@ -30,11 +46,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2B25CFE1229DE6C6009A8B37 /* FirebaseDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseDatabase.swift; sourceTree = "<group>"; };
 		2B700B18226D92DB00A0FB18 /* SolarisUV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SolarisUV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B700B1B226D92DC00A0FB18 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B700B22226D92E600A0FB18 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
 		2B700B25226D92E600A0FB18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2B700B27226D92E600A0FB18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B95C63A229F2A8E0014827F /* PageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCell.swift; sourceTree = "<group>"; };
 		2BAC33082299FECB0087153F /* SkinType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkinType.swift; sourceTree = "<group>"; };
 		2BAC330F229A0DFB0087153F /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		2BAC3311229B37B00087153F /* UserAge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAge.swift; sourceTree = "<group>"; };
@@ -45,6 +63,20 @@
 		2BC696AE226E895E009A50FD /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		2BC696B0226E916D009A50FD /* UVViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UVViewController.swift; sourceTree = "<group>"; };
 		2BD9F374229B61430078CC64 /* VitaminDProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VitaminDProgress.swift; sourceTree = "<group>"; };
+		2BE45382229E79E90017892C /* PageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageVC.swift; sourceTree = "<group>"; };
+		2BE45385229E8A0F0017892C /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Light.ttf"; sourceTree = "<group>"; };
+		2BE45387229E8B360017892C /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
+		2BE45389229E8C660017892C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		2BE4538B229E906C0017892C /* Lato-Hairline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Hairline.ttf"; sourceTree = "<group>"; };
+		2BE4538C229E906C0017892C /* Lato-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Black.ttf"; sourceTree = "<group>"; };
+		2BE4538D229E906C0017892C /* Lato-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-BlackItalic.ttf"; sourceTree = "<group>"; };
+		2BE4538E229E906C0017892C /* Lato-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-BoldItalic.ttf"; sourceTree = "<group>"; };
+		2BE4538F229E906D0017892C /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
+		2BE45390229E906D0017892C /* Lato-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Italic.ttf"; sourceTree = "<group>"; };
+		2BE45391229E906D0017892C /* Lato-HairlineItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-HairlineItalic.ttf"; sourceTree = "<group>"; };
+		2BE45392229E906D0017892C /* Lato-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-LightItalic.ttf"; sourceTree = "<group>"; };
+		2BE4539B229E9E7B0017892C /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		2BE4539D229EBEE80017892C /* SwipingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipingController.swift; sourceTree = "<group>"; };
 		2BF46E0322988F5B000683BD /* BLECentralViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLECentralViewController.swift; sourceTree = "<group>"; };
 		2BF46E0522988F83000683BD /* UartModuleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UartModuleViewController.swift; sourceTree = "<group>"; };
 		2BF46E0722988FD0000683BD /* PeripheralTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeripheralTableViewCell.swift; sourceTree = "<group>"; };
@@ -68,6 +100,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B25CFE0229DE653009A8B37 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				2B25CFE1229DE6C6009A8B37 /* FirebaseDatabase.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
 		2B2CCAF2226DA1F2008EEA7B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -76,6 +116,10 @@
 				2BAC330B2299FFAC0087153F /* User Authentication */,
 				2BAC330E229A021E0087153F /* User Profile */,
 				2BD9F373229B60C00078CC64 /* Vitamin D Goal */,
+				2B25CFE0229DE653009A8B37 /* Database */,
+				2BE45382229E79E90017892C /* PageVC.swift */,
+				2BE4539D229EBEE80017892C /* SwipingController.swift */,
+				2B95C63A229F2A8E0014827F /* PageCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -94,6 +138,9 @@
 		2B2CCAF4226DA287008EEA7B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2BE45389229E8C660017892C /* Constants.swift */,
+				2BE4539B229E9E7B0017892C /* Extensions.swift */,
+				2BE45384229E899A0017892C /* Fonts */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -193,6 +240,23 @@
 			path = "Vitamin D Goal";
 			sourceTree = "<group>";
 		};
+		2BE45384229E899A0017892C /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				2BE4538C229E906C0017892C /* Lato-Black.ttf */,
+				2BE4538D229E906C0017892C /* Lato-BlackItalic.ttf */,
+				2BE4538E229E906C0017892C /* Lato-BoldItalic.ttf */,
+				2BE4538B229E906C0017892C /* Lato-Hairline.ttf */,
+				2BE45391229E906D0017892C /* Lato-HairlineItalic.ttf */,
+				2BE45390229E906D0017892C /* Lato-Italic.ttf */,
+				2BE45392229E906D0017892C /* Lato-LightItalic.ttf */,
+				2BE4538F229E906D0017892C /* Lato-Regular.ttf */,
+				2BE45385229E8A0F0017892C /* Lato-Light.ttf */,
+				2BE45387229E8B360017892C /* Lato-Bold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		CD8825769CD241A04B3B4D95 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -270,10 +334,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BE45386229E8A0F0017892C /* Lato-Light.ttf in Resources */,
+				2BE45393229E906E0017892C /* Lato-Hairline.ttf in Resources */,
+				2BE45388229E8B360017892C /* Lato-Bold.ttf in Resources */,
 				2B700B26226D92E600A0FB18 /* LaunchScreen.storyboard in Resources */,
+				2BE45394229E906E0017892C /* Lato-Black.ttf in Resources */,
+				2BE45395229E906E0017892C /* Lato-BlackItalic.ttf in Resources */,
 				2BC696A7226E8129009A50FD /* GoogleService-Info.plist in Resources */,
+				2BE45399229E906E0017892C /* Lato-HairlineItalic.ttf in Resources */,
 				2B700B23226D92E600A0FB18 /* Assets.xcassets in Resources */,
 				2BC696A9226E85F3009A50FD /* Main.storyboard in Resources */,
+				2BE45396229E906E0017892C /* Lato-BoldItalic.ttf in Resources */,
+				2BE45398229E906E0017892C /* Lato-Italic.ttf in Resources */,
+				2BE45397229E906E0017892C /* Lato-Regular.ttf in Resources */,
+				2BE4539A229E906E0017892C /* Lato-LightItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,10 +418,14 @@
 				2BAC33092299FECB0087153F /* SkinType.swift in Sources */,
 				2BC696AD226E8932009A50FD /* LogInViewController.swift in Sources */,
 				2BC696B1226E916D009A50FD /* UVViewController.swift in Sources */,
+				2BE4539E229EBEE80017892C /* SwipingController.swift in Sources */,
 				2BFC06A2229228FE004513AF /* SideMenuVC.swift in Sources */,
+				2BE45383229E79E90017892C /* PageVC.swift in Sources */,
 				2BF46E0822988FD0000683BD /* PeripheralTableViewCell.swift in Sources */,
 				2BC696AF226E895E009A50FD /* WelcomeViewController.swift in Sources */,
+				2BE4539C229E9E7B0017892C /* Extensions.swift in Sources */,
 				2BF46E0422988F5B000683BD /* BLECentralViewController.swift in Sources */,
+				2B25CFE2229DE6C7009A8B37 /* FirebaseDatabase.swift in Sources */,
 				2BC696AB226E8901009A50FD /* RegisterViewController.swift in Sources */,
 				2BAC3312229B37B00087153F /* UserAge.swift in Sources */,
 				2BAC3310229A0DFB0087153F /* CollectionViewCell.swift in Sources */,
@@ -356,6 +434,8 @@
 				2BF46E0622988F83000683BD /* UartModuleViewController.swift in Sources */,
 				2BFC06A6229247F5004513AF /* MainVC.swift in Sources */,
 				2BF46E0A2298901E000683BD /* UUIDKey.swift in Sources */,
+				2BE4538A229E8C660017892C /* Constants.swift in Sources */,
+				2B95C63B229F2A8E0014827F /* PageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

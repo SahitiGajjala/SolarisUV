@@ -6,7 +6,6 @@
 //  Copyright © 2019 Sahiti Gajjala. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 var SDDequivalentOf1IU: Double = 0.0
@@ -42,7 +41,7 @@ class SkinType: UIViewController, UICollectionViewDelegate, UICollectionViewData
         let layout = self.collectionView.collectionViewLayout as! UICollectionViewFlowLayout
         layout.sectionInset = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5)
         layout.minimumInteritemSpacing = 5
-        layout.itemSize = CGSize(width: (self.collectionView.frame.size.width - 20)/2, height: (self.collectionView.frame.size.height)/3)
+        layout.itemSize = CGSize(width: (self.collectionView.frame.size.width - 20)/2, height: (self.collectionView.frame.size.height - 20)/3)
         
     }
 
@@ -58,10 +57,10 @@ class SkinType: UIViewController, UICollectionViewDelegate, UICollectionViewData
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! CollectionViewCell
         
-        cell.skinType1Label.text = skinTypes[indexPath.item]
+       // cell.skinType1Label.text = skinTypes[indexPath.item]
         cell.skinType1ImageView.image = skinTypeImages[indexPath.item]
         cell.layer.borderColor = UIColor.lightGray.cgColor
-        cell.layer.borderWidth = 0.5
+        cell.layer.borderWidth = 1
         
         return cell
         

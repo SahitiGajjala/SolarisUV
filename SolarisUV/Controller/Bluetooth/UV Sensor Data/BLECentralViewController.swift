@@ -6,9 +6,9 @@
 //  Copyright © 2019 Sahiti Gajjala. All rights reserved.
 //
 
-import Foundation
 import UIKit
 import CoreBluetooth
+import Firebase
 
 
 var txCharacteristic : CBCharacteristic?
@@ -46,6 +46,8 @@ class BLECentralViewController : UIViewController, CBCentralManagerDelegate, CBP
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         self.baseTableView.delegate = self
         self.baseTableView.dataSource = self
         self.baseTableView.reloadData()
@@ -268,21 +270,40 @@ class BLECentralViewController : UIViewController, CBCentralManagerDelegate, CBP
             
 
 // Sensor data sum and Vitamin D progress percentage
+         
+            //var sensorData: Double = 0.0
             
         let num1 = (characteristicASCIIValue as NSString).doubleValue
             
             sensorUVIDataArray.append(num1)
-            print(sensorUVIDataArray)
+          //  print(sensorUVIDataArray)
             
             let totalSumSensorUVIDataArray = sensorUVIDataArray.reduce(0,+)
             
             recievedUVRadiation = totalSumSensorUVIDataArray/40
-            print ("'The total UV Intensity is \(recievedUVRadiation)")
-            print("This is the SDD equivalent \(SDDequivalentOf1IU)")
+          //  print ("'The total UV Intensity is \(recievedUVRadiation)")
+          //  print("This is the SDD equivalent \(SDDequivalentOf1IU)")
             
             vitD = (recievedUVRadiation)/(SDDequivalentOf1IU)
             vitDAge = (vitD/600)*100
+            
+            
             print("This is the percentage of progress \(vitDAge)")
+            
+            let sensorDataDB = Database.database().reference().child("Sensor Data")
+            
+            let sensorDataDictionary = ["Sender": Auth.auth().currentUser?.email, "Sensor Data Body": "\(vitD)"]
+            
+            sensorDataDB.childByAutoId().setValue(sensorDataDictionary) {
+                (error, reference) in
+                
+                if error != nil {
+                    print(error!)
+                } else {
+                   // print("Data saved succesfully")
+                }
+            }
+            
         }
     }
     
@@ -366,6 +387,7 @@ class BLECentralViewController : UIViewController, CBCentralManagerDelegate, CBP
         return cell
     }
     
+    // Press the peripheral and connect
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         blePeripheral = peripherals[indexPath.row]
         connectToDevice()
