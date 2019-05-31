@@ -6,7 +6,57 @@
 ////  Copyright © 2019 Sahiti Gajjala. All rights reserved.
 ////
 //
-//import UIKit
+import UIKit
+import SwiftCharts
+
+
+class VitaminDHistory: UIViewController {
+
+    var chartView: BarsChart!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+//        let labelSettings = ChartLabelSettings(fontColor: UIColor.colorPaletteDeepBlue)
+//        let xModel = ChartAxisModel(lineColor: UIColor.colorPaletteDeepBlue)
+
+        
+        let chartConfig = BarsChartConfig(
+            valsAxisConfig: ChartAxisConfig(from: 0, to: 1000, by: 100)
+        )
+        let frame = CGRect(x: 0, y: 270, width: self.view.frame.width, height: 500)
+        let chart = BarsChart(
+            
+            frame: frame,
+            chartConfig: chartConfig,
+            xTitle: "Days",
+            yTitle: "IU",
+            bars: [
+            ("Sun", 450),
+            ("Mon", 600),
+            ("Tue", 750),
+            ("Wed", 650),
+            ("Thu", 200),
+            ("Fri", FridayIUArraySum),
+            ("Sat", 0),
+            ],
+            color: UIColor.colorPalettecoral,
+            barWidth: 15
+        
+        )
+        
+        self.view.addSubview(chart.view)
+        self.chartView = chart
+        
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
+}
+
+
 //
 ////var FridayIUArray: [Double] = []
 ////var FridayIUArraySum: Double = 0.0
@@ -19,7 +69,6 @@
 //var saturdayIUArraySum: Double = 0.0
 //
 //
-//class VitaminDHistory: UIViewController {
 //
 //    let dayOfWeekArray = [1, 2, 3, 4, 5, 6, 7]
 //
@@ -47,6 +96,4 @@
 //        }
 //    }
 //
-//}
-
 

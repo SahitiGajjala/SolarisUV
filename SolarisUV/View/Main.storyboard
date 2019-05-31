@@ -660,10 +660,10 @@
             </objects>
             <point key="canvasLocation" x="4615.9420289855079" y="533.70535714285711"/>
         </scene>
-        <!--View Controller-->
+        <!--VitaminD History-->
         <scene sceneID="MQT-a4-axB">
             <objects>
-                <viewController id="hQN-3f-uJk" sceneMemberID="viewController">
+                <viewController id="hQN-3f-uJk" customClass="VitaminDHistory" customModule="SolarisUV" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="iyi-mO-MgI"/>
                         <viewControllerLayoutGuide type="bottom" id="zCS-Ka-e1e"/>

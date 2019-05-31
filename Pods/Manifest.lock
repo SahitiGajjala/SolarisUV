@@ -67,19 +67,25 @@ PODS:
     - GoogleUtilities/Logger
   - GTMSessionFetcher/Core (1.2.1)
   - leveldb-library (1.20)
+  - Macaw (0.9.5):
+    - SWXMLHash
   - nanopb (0.3.901):
     - nanopb/decode (= 0.3.901)
     - nanopb/encode (= 0.3.901)
   - nanopb/decode (0.3.901)
   - nanopb/encode (0.3.901)
   - SVProgressHUD (2.2.5)
+  - SwiftCharts (0.6.5)
+  - SWXMLHash (4.9.0)
 
 DEPENDENCIES:
   - ChameleonFramework
   - Firebase
   - Firebase/Auth
   - Firebase/Database
+  - Macaw (= 0.9.5)
   - SVProgressHUD
+  - SwiftCharts (~> 0.6.5)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -95,8 +101,11 @@ SPEC REPOS:
     - GoogleUtilities
     - GTMSessionFetcher
     - leveldb-library
+    - Macaw
     - nanopb
     - SVProgressHUD
+    - SwiftCharts
+    - SWXMLHash
 
 SPEC CHECKSUMS:
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
@@ -111,9 +120,12 @@ SPEC CHECKSUMS:
   GoogleUtilities: 273e67030e0de313e7304f6dcfa96fc5214f6c23
   GTMSessionFetcher: 32aeca0aa144acea523e1c8e053089dec2cb98ca
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
+  Macaw: 10bf9e327cb75f24e3225d5229a80ed544df85f0
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  SwiftCharts: 2e755ea292f0b87d3e4b2c1eb5afc080a20cdc15
+  SWXMLHash: 87b0006848a548b7f9485b40bc71721b3ae39add
 
-PODFILE CHECKSUM: 5d5187dc220aad65240ac43f0a1deb372f372649
+PODFILE CHECKSUM: 0cce67d20e0ffb8349b3cd8f555fec2825342328
 
 COCOAPODS: 1.6.1

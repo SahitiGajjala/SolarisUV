@@ -11,6 +11,9 @@ pod 'Firebase/Auth'
 pod 'Firebase/Database'
 pod 'SVProgressHUD'
 pod 'ChameleonFramework'
+pod 'SwiftCharts', '~> 0.6.5'
+pod "Macaw", "0.9.5"
+
 
 end
 

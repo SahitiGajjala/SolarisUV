@@ -290,11 +290,11 @@ class BLECentralViewController : UIViewController, CBCentralManagerDelegate, CBP
             vitDAge = (vitD/600)*100
             
             recievedUVRadiationDataPoint = (num1/40)/(SDDequivalentOf1IU)
+            //            let dateComponents = DateComponents(calendar: calendar, year: 1998, month: 8, day: 11, hour: 2, minute: 12)
            
             //Time stamping the sensor data
             let calendar = Calendar.current
             let rightNow = Date()
-            let dateComponents = DateComponents(calendar: calendar, year: 1998, month: 8, day: 11, hour: 2, minute: 12)
             let componentsOfRightNow = calendar.dateComponents([.year, .month, .day, .hour, .minute], from: rightNow)
             dayOfWeek = calendar.component(.weekday, from: rightNow)
             print("Date: \(componentsOfRightNow)")
