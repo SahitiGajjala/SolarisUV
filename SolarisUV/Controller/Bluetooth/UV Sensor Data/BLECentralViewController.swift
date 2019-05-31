@@ -19,6 +19,12 @@ var characteristicASCIIValue = NSString()
 var vitDAge: Double = 0.0
 var recievedUVRadiation: Double = 0.0
 var vitD: Double = 0.0
+var recievedUVRadiationDataPoint: Double = 0.0
+
+var dayOfWeek: Int = 0
+
+var FridayIUArray: [Double] = []
+var FridayIUArraySum: Double = 0.0
 
 class BLECentralViewController : UIViewController, CBCentralManagerDelegate, CBPeripheralDelegate, UITableViewDelegate, UITableViewDataSource{
     
@@ -279,8 +285,20 @@ class BLECentralViewController : UIViewController, CBCentralManagerDelegate, CBP
             
             recievedUVRadiation = totalSumSensorUVIDataArray/40
             
+            
             vitD = (recievedUVRadiation)/(SDDequivalentOf1IU)
             vitDAge = (vitD/600)*100
+            
+            recievedUVRadiationDataPoint = (num1/40)/(SDDequivalentOf1IU)
+           
+            //Time stamping the sensor data
+            let calendar = Calendar.current
+            let rightNow = Date()
+            let dateComponents = DateComponents(calendar: calendar, year: 1998, month: 8, day: 11, hour: 2, minute: 12)
+            let componentsOfRightNow = calendar.dateComponents([.year, .month, .day, .hour, .minute], from: rightNow)
+            dayOfWeek = calendar.component(.weekday, from: rightNow)
+            print("Date: \(componentsOfRightNow)")
+            print("Day of week: \(dayOfWeek)")
             
             print("This is the SDD value based on selected skin type: \(SDDequivalentOf1IU)")
             print("This is sensor UVI data array: \(sensorUVIDataArray)")
@@ -288,6 +306,15 @@ class BLECentralViewController : UIViewController, CBCentralManagerDelegate, CBP
             print("This is the UV Radiation recieved: \(recievedUVRadiation)")
             print("This is the vitamin D in IU created: \(vitD)")
             print("This is the percentage of vitamin D for the day:\(vitDAge)")
+
+            if dayOfWeek == 6 {
+                FridayIUArray.append(recievedUVRadiationDataPoint)
+                FridayIUArraySum = FridayIUArray.reduce(0,+)
+                print("This is Friday's Array of IU \(FridayIUArray)")
+                print("This is Fridays Total IU \(FridayIUArraySum)")
+                
+            }
+
             
             
             let sensorDataDB = Database.database().reference().child("Sensor Data")

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		29665DB5DF47A13A8DAE417B /* Pods_SolarisUV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F4245BAE2AC6F37A162AA66 /* Pods_SolarisUV.framework */; };
 		2B25CFE2229DE6C7009A8B37 /* FirebaseDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B25CFE1229DE6C6009A8B37 /* FirebaseDatabase.swift */; };
+		2B63D5FD22A1305B000B9899 /* VitaminDHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B63D5FC22A1305B000B9899 /* VitaminDHistory.swift */; };
 		2B700B1C226D92DC00A0FB18 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B700B1B226D92DC00A0FB18 /* AppDelegate.swift */; };
 		2B700B23226D92E600A0FB18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B700B22226D92E600A0FB18 /* Assets.xcassets */; };
 		2B700B26226D92E600A0FB18 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B700B24226D92E600A0FB18 /* LaunchScreen.storyboard */; };
@@ -50,6 +51,7 @@
 
 /* Begin PBXFileReference section */
 		2B25CFE1229DE6C6009A8B37 /* FirebaseDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseDatabase.swift; sourceTree = "<group>"; };
+		2B63D5FC22A1305B000B9899 /* VitaminDHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VitaminDHistory.swift; sourceTree = "<group>"; };
 		2B700B18226D92DB00A0FB18 /* SolarisUV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SolarisUV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B700B1B226D92DC00A0FB18 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B700B22226D92E600A0FB18 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
@@ -253,6 +255,7 @@
 			isa = PBXGroup;
 			children = (
 				2BD9F374229B61430078CC64 /* VitaminDProgress.swift */,
+				2B63D5FC22A1305B000B9899 /* VitaminDHistory.swift */,
 			);
 			path = "Vitamin D Goal";
 			sourceTree = "<group>";
@@ -456,6 +459,7 @@
 				2BE4538A229E8C660017892C /* Constants.swift in Sources */,
 				2B95C63B229F2A8E0014827F /* PageCell.swift in Sources */,
 				2B95C63D229F66230014827F /* PageCell2.swift in Sources */,
+				2B63D5FD22A1305B000B9899 /* VitaminDHistory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
