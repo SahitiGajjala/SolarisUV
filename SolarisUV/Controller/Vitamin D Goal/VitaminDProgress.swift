@@ -15,19 +15,37 @@ class VitaminDProgress: UIViewController, URLSessionDownloadDelegate {
     
     let percentageLabel: UILabel = {
         let label = UILabel()
-        label.text = "Start"
+        label.text = "Press"
         label.textAlignment = .center
-        label.font = UIFont.boldSystemFont(ofSize: 32)
+        let deepBlueColorNext = UIColor.colorPaletteDeepBlue
+        label.textColor = deepBlueColorNext
+        label.font = UIFont.boldSystemFont(ofSize: 18)
         return label
     }()
     
+//    let goalLabel: UILabel = {
+//        let label = UILabel()
+//        label.text = "Daily IU Goal\n 600IU"
+//        label.textAlignment = .center
+//        let deepBlueColorNext = UIColor.colorPaletteDeepBlue
+//        label.textColor = deepBlueColorNext
+//        label.font = UIFont.boldSystemFont(ofSize: 18)
+//        return label
+//    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setupLayout()
         view .addSubview(percentageLabel)
         percentageLabel.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
         percentageLabel.center = view.center
         
+//        view.addSubview(goalLabel)
+//        goalLabel.frame = CGRect(x: 20, y: 20, width: 100, height: 100)
+//        goalLabel.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+//        goalLabel.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 30).isActive = true
+
+
         //Circle drawing
         
 //        let center = view.center
@@ -140,6 +158,45 @@ class VitaminDProgress: UIViewController, URLSessionDownloadDelegate {
         
     // animateCircle()
     }
+    
+    let welcomeImageView: UIImageView = {
+        let imageView = UIImageView(image: UIImage(named: "iu-tracker-2"))
+        // this enables autolayout for our imageview
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.contentMode = .scaleAspectFit
+        return imageView
+    }()
+    
+    private func setupLayout() {
+        
+        let middleImageContainerView = UIView()
+        //        middleImageContainerView.backgroundColor = .blue
+        view.addSubview(middleImageContainerView)
+        //        middleImageContainerView.frame = CGRect(x: 0, y: 250, width: 100, height: 100)
+        //enable auto layout
+        middleImageContainerView.translatesAutoresizingMaskIntoConstraints = false
+        
+        middleImageContainerView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        
+        middleImageContainerView.heightAnchor.constraint(equalTo: view.heightAnchor).isActive = true
+        
+        middleImageContainerView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        
+        middleImageContainerView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        
+        middleImageContainerView.addSubview(welcomeImageView)
+        welcomeImageView.leftAnchor.constraint(equalTo: middleImageContainerView.leftAnchor, constant: 50).isActive = true
+        welcomeImageView.topAnchor.constraint(equalTo: middleImageContainerView.topAnchor, constant: 150).isActive = true
+        welcomeImageView.widthAnchor.constraint(equalToConstant: 200).isActive = true
+        welcomeImageView.heightAnchor.constraint(equalToConstant: 200).isActive = true
+        
+//
+//        middleImageContainerView.addSubview(descriptionTextView)
+//        descriptionTextView.topAnchor.constraint(equalTo: middleImageContainerView.topAnchor, constant: 425).isActive = true
+//        descriptionTextView.leftAnchor.constraint(equalTo: middleImageContainerView.leftAnchor, constant: 30).isActive = true
+    }
+    
+    
 }
 
 

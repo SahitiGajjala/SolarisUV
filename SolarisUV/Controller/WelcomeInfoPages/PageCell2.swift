@@ -21,9 +21,9 @@ class PageCell2: UICollectionViewCell{
     let descriptionTextView: UITextView = {
         let textView = UITextView()
         
-        let attributedText = NSMutableAttributedString(string: "Welcome to solaris uv", attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 18), NSAttributedString.Key.foregroundColor: UIColor.colorPaletteDeepBlue])
+        let attributedText = NSMutableAttributedString(string: "Bluetooth Connection Required", attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 18), NSAttributedString.Key.foregroundColor: UIColor.colorPaletteDeepBlue])
         
-        attributedText.append(NSMutableAttributedString(string: "\n\nBalance your sun protection \n\nand vitamin D production.", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 13), NSAttributedString.Key.foregroundColor: UIColor.colorPaletteGrey]))
+        attributedText.append(NSMutableAttributedString(string: "\n\nPlease ensure your bluetooth \n\non your device is turned on.", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 13), NSAttributedString.Key.foregroundColor: UIColor.colorPaletteGrey]))
         
         textView.attributedText = attributedText
         
@@ -60,7 +60,7 @@ class PageCell2: UICollectionViewCell{
         middleImageContainerView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
         
         middleImageContainerView.addSubview(welcomeImageView)
-        welcomeImageView.leftAnchor.constraint(equalTo: middleImageContainerView.leftAnchor, constant: 100).isActive = true
+        welcomeImageView.leftAnchor.constraint(equalTo: middleImageContainerView.leftAnchor, constant: 30).isActive = true
         welcomeImageView.topAnchor.constraint(equalTo: middleImageContainerView.topAnchor, constant: 275).isActive = true
         welcomeImageView.widthAnchor.constraint(equalToConstant: 150).isActive = true
         welcomeImageView.heightAnchor.constraint(equalToConstant: 150).isActive = true

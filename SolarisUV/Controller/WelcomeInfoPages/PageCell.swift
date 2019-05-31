@@ -38,11 +38,11 @@ class PageCell: UICollectionViewCell{
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        
-//        backgroundColor = .purple
+
         setupLayout()
         
     }
+    
     
     private func setupLayout() {
         
@@ -82,3 +82,13 @@ class PageCell: UICollectionViewCell{
     }
     
 }
+//
+//@objc func buttonClicked(sender: UIButton){
+//    print("Button clicked")
+//}
+//
+//let button = UIButton.init(type: .system)
+//button.setTitle("SKIP", for: .normal)
+//button.addTarget(self, action: #selector(buttonClicked), for: .touchUpInside)
+//self.addSubview(button)
+

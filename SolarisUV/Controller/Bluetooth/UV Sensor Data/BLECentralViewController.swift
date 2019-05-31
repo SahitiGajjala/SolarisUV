@@ -263,36 +263,37 @@ class BLECentralViewController : UIViewController, CBCentralManagerDelegate, CBP
         if characteristic == rxCharacteristic {
             if let ASCIIstring = NSString(data: characteristic.value!, encoding: String.Encoding.utf8.rawValue) {
                 characteristicASCIIValue = ASCIIstring
-                print("Value Recieved: \((characteristicASCIIValue as String))")
+//                print("Value Recieved: \((characteristicASCIIValue as String))")
                 NotificationCenter.default.post(name:NSNotification.Name(rawValue: "Notify"), object: nil)
                 
             }
             
 
 // Sensor data sum and Vitamin D progress percentage
-         
-            //var sensorData: Double = 0.0
             
         let num1 = (characteristicASCIIValue as NSString).doubleValue
             
             sensorUVIDataArray.append(num1)
-          //  print(sensorUVIDataArray)
             
             let totalSumSensorUVIDataArray = sensorUVIDataArray.reduce(0,+)
             
             recievedUVRadiation = totalSumSensorUVIDataArray/40
-          //  print ("'The total UV Intensity is \(recievedUVRadiation)")
-          //  print("This is the SDD equivalent \(SDDequivalentOf1IU)")
             
             vitD = (recievedUVRadiation)/(SDDequivalentOf1IU)
             vitDAge = (vitD/600)*100
             
+            print("This is the SDD value based on selected skin type: \(SDDequivalentOf1IU)")
+            print("This is sensor UVI data array: \(sensorUVIDataArray)")
+            print("This is the sum of sensor data: \(totalSumSensorUVIDataArray)")
+            print("This is the UV Radiation recieved: \(recievedUVRadiation)")
+            print("This is the vitamin D in IU created: \(vitD)")
+            print("This is the percentage of vitamin D for the day:\(vitDAge)")
             
-            print("This is the percentage of progress \(vitDAge)")
             
             let sensorDataDB = Database.database().reference().child("Sensor Data")
             
             let sensorDataDictionary = ["Sender": Auth.auth().currentUser?.email, "Sensor Data Body": "\(vitD)"]
+            
             
             sensorDataDB.childByAutoId().setValue(sensorDataDictionary) {
                 (error, reference) in
@@ -300,7 +301,6 @@ class BLECentralViewController : UIViewController, CBCentralManagerDelegate, CBP
                 if error != nil {
                     print(error!)
                 } else {
-                   // print("Data saved succesfully")
                 }
             }
             

@@ -13,7 +13,7 @@ class SwipingController: UICollectionViewController, UICollectionViewDelegateFlo
     private let previousButton: UIButton = {
         
         let button = UIButton(type: .system)
-        button.setTitle("PREV", for: .normal)
+        button.setTitle("Prev", for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
         let deepBlueColorNext = UIColor.colorPaletteDeepBlue
@@ -35,7 +35,7 @@ class SwipingController: UICollectionViewController, UICollectionViewDelegateFlo
     private let nextButton: UIButton = {
         
         let button = UIButton(type: .system)
-        button.setTitle("NEXT", for: .normal)
+        button.setTitle("Next", for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
         let deepBlueColorNext = UIColor.colorPaletteDeepBlue
@@ -53,6 +53,9 @@ class SwipingController: UICollectionViewController, UICollectionViewDelegateFlo
         pageControl.currentPage = nextIndex
         let indexPath = IndexPath(item: nextIndex, section: 0)
         collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+//        if pageControl.currentPage == 3{
+//            self.performSegue(withIdentifier: "goToUV", sender: self)
+//        }
     }
     
     let pages = ["PageCell", "PageCell2", "PageCell3", "PageCell4"]
@@ -90,6 +93,16 @@ class SwipingController: UICollectionViewController, UICollectionViewDelegateFlo
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let button = UIButton(frame: CGRect(x: 275, y: 50, width: 100, height: 50))
+//        button.backgroundColor = .green
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
+        button.setTitle("Skip", for: .normal)
+        button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        let deepBlueColorNext = UIColor.colorPaletteDeepBlue
+        button.setTitleColor(deepBlueColorNext, for: .normal)
+        
+        self.view.addSubview(button)
+        
         setupBottomControls()
 //
 //        collectionView?.backgroundColor = .white
@@ -102,6 +115,29 @@ class SwipingController: UICollectionViewController, UICollectionViewDelegateFlo
                 collectionView?.isPagingEnabled = true
         
     }
+    
+    @objc func buttonAction(sender: UIButton!) {
+        print("Button tapped")
+        
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "UVViewController") as! UVViewController
+        navigationController?.pushViewController(nextViewController, animated:true)
+        
+//        self.performSegue(withIdentifier: "goToUV2", sender: self)
+    }
+    
+//    @IBAction func sequeTapped(_ sender: Any) {
+//        let mainStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+//
+//        guard let destinationViewController = mainStoryboard.instantiateViewController(withIdentifier: "UVViewController") as? UVViewController else {
+//            print("Couldn't find the view controller")
+//            return
+//
+//        }
+//
+//        navigationController?.pushViewController(destinationViewController, animated: true)
+//    }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0
