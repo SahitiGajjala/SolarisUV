@@ -42,13 +42,6 @@ class UVViewController: UIViewController {
 
     }
 
-    //Declaration of instance variables
-
-    //IBOutlets
-
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//    }
 
     @IBAction func logOutPressed(_ sender: Any) {
         

@@ -6,9 +6,11 @@ target 'SolarisUV' do
   use_frameworks!
 
   # Pods for SolarisUV
- pod 'Firebase'
+pod 'Firebase'
 pod 'Firebase/Auth'
 pod 'Firebase/Database'
+pod 'Firebase/Core'
+pod 'Firebase/Storage'
 pod 'SVProgressHUD'
 pod 'ChameleonFramework'
 pod 'SwiftCharts', '~> 0.6.5'

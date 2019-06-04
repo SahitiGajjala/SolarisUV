@@ -8,10 +8,13 @@
 
 import UIKit
 
+// UV Radiation equivalent of an oral dose of 1000 IU
+var SDD: Double = 0.0
+// Normalized UV Radiation equivalent of an oral dose of 1000 IU
+var SDDequivalentOf1000IU: Double = 0.0
+// UV Radiation equivalent of an oral dose of 1 IU
 var SDDequivalentOf1IU: Double = 0.0
 var userSkinType: Double = 0.0
-var SDD: Double = 0.0
-var SDDequivalentOf1000IU: Double = 0.0
 
 class SkinType: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
@@ -71,12 +74,17 @@ class SkinType: UIViewController, UICollectionViewDelegate, UICollectionViewData
         let cell = collectionView.cellForItem(at: indexPath)
         cell?.layer.borderColor = UIColor.gray.cgColor
         cell?.layer.borderWidth = 2
-        let SDD = (skinMED[indexPath.item])/4
-        let SDDequivalentOf1000IU = ((SDD*2)/3)
+        
+        //Holick’s rule: 1/4 of a minimal erythemal dose (MED) over 1/4 of a body is equivalent to 1000 International Units (IU)
+        SDD = (skinMED[indexPath.item])/4
+        //UV exposure estimates based on Boston reference sunlight, instead of the UV lamp employed in the originating experiments, over estimate UV exposure equivalent to ∼1000 IU orally by ∼1/3   (Dowdy JC1  J Steroid Biochem Mol Biol. 2010 ).  We will use SDD* 2/3 to determine the time needed  to produce vitamin D equivalent to 1000 international units as a standard.
+        SDDequivalentOf1000IU = ((SDD*2)/3)
+        
         SDDequivalentOf1IU = (SDDequivalentOf1000IU/1000)
+        
         print("For \(skinTypes[indexPath.item]), \(SDDequivalentOf1IU) UVR is equal to 1 IU")
+        self.performSegue(withIdentifier: "goToAge", sender: self)
     }
-    
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath)

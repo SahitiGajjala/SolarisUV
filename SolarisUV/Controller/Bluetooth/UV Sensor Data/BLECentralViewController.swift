@@ -23,8 +23,22 @@ var recievedUVRadiationDataPoint: Double = 0.0
 
 var dayOfWeek: Int = 0
 
+var SundayIUArray: [Double] = []
+var MondayIUArray: [Double] = []
+var TuesdayIUArray: [Double] = []
+var WednesdayIUArray: [Double] = []
+var ThursdayIUArray: [Double] = []
 var FridayIUArray: [Double] = []
-var FridayIUArraySum: Double = 0.0
+var SaturdayIUArray: [Double] = []
+
+
+var sundayIUArraySum: Double = 0.0
+var mondayIUArraySum: Double = 0.0
+var tuesdayIUArraySum: Double = 0.0
+var wednesdayIUArraySum: Double = 0.0
+var thursdayIUArraySum: Double = 0.0
+var fridayIUArraySum: Double = 0.0
+var saturdayIUArraySum: Double = 0.0
 
 class BLECentralViewController : UIViewController, CBCentralManagerDelegate, CBPeripheralDelegate, UITableViewDelegate, UITableViewDataSource{
     
@@ -287,7 +301,7 @@ class BLECentralViewController : UIViewController, CBCentralManagerDelegate, CBP
             
             
             vitD = (recievedUVRadiation)/(SDDequivalentOf1IU)
-            vitDAge = (vitD/600)*100
+            vitDAge = (vitD/IUageOfUser)*100
             
             recievedUVRadiationDataPoint = (num1/40)/(SDDequivalentOf1IU)
             //            let dateComponents = DateComponents(calendar: calendar, year: 1998, month: 8, day: 11, hour: 2, minute: 12)
@@ -306,16 +320,56 @@ class BLECentralViewController : UIViewController, CBCentralManagerDelegate, CBP
             print("This is the UV Radiation recieved: \(recievedUVRadiation)")
             print("This is the vitamin D in IU created: \(vitD)")
             print("This is the percentage of vitamin D for the day:\(vitDAge)")
-
-            if dayOfWeek == 6 {
-                FridayIUArray.append(recievedUVRadiationDataPoint)
-                FridayIUArraySum = FridayIUArray.reduce(0,+)
-                print("This is Friday's Array of IU \(FridayIUArray)")
-                print("This is Fridays Total IU \(FridayIUArraySum)")
+            
+            if dayOfWeek == 1 {
+                SundayIUArray.append(recievedUVRadiationDataPoint)
+                sundayIUArraySum = SundayIUArray.reduce(0,+)
+                print("This is Sunday's Array of IU \(SundayIUArray)")
+                print("This is Sunday's Total IU \(sundayIUArraySum)")
                 
             }
-
-            
+            if dayOfWeek == 2 {
+                MondayIUArray.append(recievedUVRadiationDataPoint)
+                mondayIUArraySum = MondayIUArray.reduce(0,+)
+                print("This is Monday's Array of IU \(MondayIUArray)")
+                print("This is Monday's Total IU \(mondayIUArraySum)")
+                
+            }
+            if dayOfWeek == 3 {
+                TuesdayIUArray.append(recievedUVRadiationDataPoint)
+                tuesdayIUArraySum = TuesdayIUArray.reduce(0,+)
+                print("This is Tuesday's Array of IU \(TuesdayIUArray)")
+                print("This is Tuesday's Total IU \(tuesdayIUArraySum)")
+                
+            }
+            if dayOfWeek == 4 {
+                WednesdayIUArray.append(recievedUVRadiationDataPoint)
+                wednesdayIUArraySum = WednesdayIUArray.reduce(0,+)
+                print("This is Wednesday's Array of IU \(WednesdayIUArray)")
+                print("This is Wednesday's Total IU \(wednesdayIUArraySum)")
+                
+            }
+            if dayOfWeek == 5 {
+                ThursdayIUArray.append(recievedUVRadiationDataPoint)
+                thursdayIUArraySum = ThursdayIUArray.reduce(0,+)
+                print("This is Thursday's Array of IU \(ThursdayIUArray)")
+                print("This is Thursday's Total IU \(thursdayIUArraySum)")
+                
+            }
+            if dayOfWeek == 6 {
+                FridayIUArray.append(recievedUVRadiationDataPoint)
+                fridayIUArraySum = FridayIUArray.reduce(0,+)
+                print("This is Friday's Array of IU \(FridayIUArray)")
+                print("This is Fridays Total IU \(fridayIUArraySum)")
+                
+            }
+            if dayOfWeek == 7 {
+                SaturdayIUArray.append(recievedUVRadiationDataPoint)
+                saturdayIUArraySum = SaturdayIUArray.reduce(0,+)
+                print("This is Saturday's Array of IU \(SaturdayIUArray)")
+                print("This is Saturday's Total IU \(saturdayIUArraySum)")
+                
+            }
             
             let sensorDataDB = Database.database().reference().child("Sensor Data")
             

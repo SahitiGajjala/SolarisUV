@@ -101,6 +101,7 @@ class SwipingController: UICollectionViewController, UICollectionViewDelegateFlo
         let deepBlueColorNext = UIColor.colorPaletteDeepBlue
         button.setTitleColor(deepBlueColorNext, for: .normal)
         
+        
         self.view.addSubview(button)
         
         setupBottomControls()

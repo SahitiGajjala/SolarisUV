@@ -26,7 +26,9 @@
 		2BC696AD226E8932009A50FD /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC696AC226E8932009A50FD /* LogInViewController.swift */; };
 		2BC696AF226E895E009A50FD /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC696AE226E895E009A50FD /* WelcomeViewController.swift */; };
 		2BC696B1226E916D009A50FD /* UVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC696B0226E916D009A50FD /* UVViewController.swift */; };
+		2BD2FA4522A6659A0074935C /* UVTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD2FA4422A665990074935C /* UVTracker.swift */; };
 		2BD9F375229B61430078CC64 /* VitaminDProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD9F374229B61430078CC64 /* VitaminDProgress.swift */; };
+		2BDFF5E022A28EAD000FB64B /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDFF5DF22A28EAD000FB64B /* Storage.swift */; };
 		2BE45383229E79E90017892C /* PageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE45382229E79E90017892C /* PageVC.swift */; };
 		2BE45386229E8A0F0017892C /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2BE45385229E8A0F0017892C /* Lato-Light.ttf */; };
 		2BE45388229E8B360017892C /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2BE45387229E8B360017892C /* Lato-Bold.ttf */; };
@@ -70,7 +72,9 @@
 		2BC696AC226E8932009A50FD /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		2BC696AE226E895E009A50FD /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		2BC696B0226E916D009A50FD /* UVViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UVViewController.swift; sourceTree = "<group>"; };
+		2BD2FA4422A665990074935C /* UVTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UVTracker.swift; sourceTree = "<group>"; };
 		2BD9F374229B61430078CC64 /* VitaminDProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VitaminDProgress.swift; sourceTree = "<group>"; };
+		2BDFF5DF22A28EAD000FB64B /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		2BE45382229E79E90017892C /* PageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageVC.swift; sourceTree = "<group>"; };
 		2BE45385229E8A0F0017892C /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Light.ttf"; sourceTree = "<group>"; };
 		2BE45387229E8B360017892C /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
@@ -112,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				2B25CFE1229DE6C6009A8B37 /* FirebaseDatabase.swift */,
+				2BDFF5DF22A28EAD000FB64B /* Storage.swift */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -126,6 +131,7 @@
 				2BD9F373229B60C00078CC64 /* Vitamin D Goal */,
 				2B25CFE0229DE653009A8B37 /* Database */,
 				2B63E4F822A06F2700DC374C /* WelcomeInfoPages */,
+				2BD2FA4422A665990074935C /* UVTracker.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -445,6 +451,7 @@
 				2BC696AD226E8932009A50FD /* LogInViewController.swift in Sources */,
 				2BC696B1226E916D009A50FD /* UVViewController.swift in Sources */,
 				2BE4539E229EBEE80017892C /* SwipingController.swift in Sources */,
+				2BD2FA4522A6659A0074935C /* UVTracker.swift in Sources */,
 				2BFC06A2229228FE004513AF /* SideMenuVC.swift in Sources */,
 				2BE45383229E79E90017892C /* PageVC.swift in Sources */,
 				2BF46E0822988FD0000683BD /* PeripheralTableViewCell.swift in Sources */,
@@ -466,6 +473,7 @@
 				2B95C63B229F2A8E0014827F /* PageCell.swift in Sources */,
 				2B95C63D229F66230014827F /* PageCell2.swift in Sources */,
 				2B63D5FD22A1305B000B9899 /* VitaminDHistory.swift in Sources */,
+				2BDFF5E022A28EAD000FB64B /* Storage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

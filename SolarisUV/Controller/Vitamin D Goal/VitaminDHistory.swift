@@ -9,6 +9,22 @@
 import UIKit
 import SwiftCharts
 
+//var SundayIUArray: [Double] = []
+//var MondayIUArray: [Double] = []
+//var TuesdayIUArray: [Double] = []
+//var WednesdayIUArray: [Double] = []
+//var ThursdayIUArray: [Double] = []
+//var FridayIUArray: [Double] = []
+//var SaturdayIUArray: [Double] = []
+//
+//
+//var sundayIUArraySum: Double = 0.0
+//var mondayIUArraySum: Double = 0.0
+//var tuesdayIUArraySum: Double = 0.0
+//var wednesdayIUArraySum: Double = 0.0
+//var thursdayIUArraySum: Double = 0.0
+//var fridayIUArraySum: Double = 0.0
+//var saturdayIUArraySum: Double = 0.0
 
 class VitaminDHistory: UIViewController {
 
@@ -32,13 +48,13 @@ class VitaminDHistory: UIViewController {
             xTitle: "Days",
             yTitle: "IU",
             bars: [
-            ("Sun", 450),
-            ("Mon", 600),
-            ("Tue", 750),
-            ("Wed", 650),
-            ("Thu", 200),
-            ("Fri", FridayIUArraySum),
-            ("Sat", 0),
+            ("Sun", sundayIUArraySum),
+            ("Mon", mondayIUArraySum),
+            ("Tue", tuesdayIUArraySum),
+            ("Wed", wednesdayIUArraySum),
+            ("Thu", thursdayIUArraySum),
+            ("Fri", fridayIUArraySum),
+            ("Sat", saturdayIUArraySum),
             ],
             color: UIColor.colorPalettecoral,
             barWidth: 15
@@ -55,45 +71,4 @@ class VitaminDHistory: UIViewController {
     }
     
 }
-
-
-//
-////var FridayIUArray: [Double] = []
-////var FridayIUArraySum: Double = 0.0
-//var sundayIUArraySum: Double = 0.0
-//var mondayIUArraySum: Double = 0.0
-//var tuesdayIUArraySum: Double = 0.0
-//var wednesdayIUArraySum: Double = 0.0
-//var thursdayIUArraySum: Double = 0.0
-//var fridayIUArraySum: Double = 0.0
-//var saturdayIUArraySum: Double = 0.0
-//
-//
-//
-//    let dayOfWeekArray = [1, 2, 3, 4, 5, 6, 7]
-//
-////    "Sunday", "Monday", "Tuesday", "Thursday", "Friday", "Saturday"
-//
-//    let specificDayOfWeekArray: [Double] = [
-//        sundayIUArraySum,
-//        mondayIUArraySum,
-//        tuesdayIUArraySum,
-//        wednesdayIUArraySum,
-//        thursdayIUArraySum,
-//        FridayIUArraySum,
-//        saturdayIUArraySum
-//    ]
-//
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//
-//
-////        if dayOfWeekArray[index] == dayOfWeek {
-////            FridayIUArray.append(vitD)
-////            FridayIUArraySum = FridayIUArray.reduce(0,+)
-//////            print("This is Fridays Total IU \(FridayIUArraySum)")
-//
-//        }
-//    }
-//
 

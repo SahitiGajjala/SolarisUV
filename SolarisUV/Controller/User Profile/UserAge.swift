@@ -8,11 +8,24 @@
 
 
 import UIKit
+import Firebase
 
-//struct GlobalVariableAge {
-//    static var ageLessThan70: Double = 600.0
-//    static var ageGreaterThan70: Double = 800.0
-//}
+var IUageOfUser: Double = 0.0
 
-//                static var ageLessThan70: Double = 600.0
-//                static var ageGreaterThan70: Double = 800.0
+class UserAge: UIViewController{
+    
+    
+    @IBAction func YoungerThan70(_ sender: Any) {
+        print("Younger than 70")
+        IUageOfUser = 600
+        
+    }
+    
+    @IBAction func OlderThan70(_ sender: Any) {
+        print("Older than 70")
+        IUageOfUser = 800
+    }
+    
+    
+    
+ }
